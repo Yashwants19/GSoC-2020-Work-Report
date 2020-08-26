@@ -11,11 +11,12 @@ My proposal for **Automatically-Generated R Bindings** was selected as an offici
 `R` is a programming language and free software environment for statistical computing and graphics supported by the R Foundation for Statistical Computing. The `R` language is widely used among statisticians and data miners for developing statistical software and data analysis. In this summer we aimed to implement `R-bindings` for mlpack, as with `Python`, `Julia`, and `Go` bindings for mlpack, adding a `R` interface would further enhance the library.
 
 ## R-Binding Generator
-For the past 3 months, I have been implementing `R` binding generator. The generator produces two files for every binding:
+For the past 3 months, I have been implementing `R` binding generator. The generator produces two files for every binding, and it also generate proper documentation for every binding in `man/` folder:
 
-A `.R` file: This file is the R interface for `R` users. It uses `Rcpp` in order to sharing data and communicate with C++. When generated, the `.R` file is build in the `mlpack/binding/R/mlpack/src` directory.
+A `.R` file: This file is the `R` interface for `R` users. It uses `Rcpp` in order to sharing data and communicate with `C++`. When generated, the `.R` file is build in the `mlpack/binding/R/mlpack/src` directory.
+
 A `.cpp` file: This file is used as a `C++` interface. This file includes the function which can be called by `R`.
-Additionally, a method specific library is created the `method_main.cpp` in order for R to call the `mlpack_main()` function.
+Additionally, a method specific library is created the `method_main.cpp` in order for `R` to call the `mlpack_main()` function.
 
 ## Pull Request
 [R-bindings](https://github.com/mlpack/mlpack/pull/2556)
