@@ -11,12 +11,11 @@ My proposal for **Automatically-Generated R Bindings** was selected as an offici
 `R` is a programming language and free software environment for statistical computing and graphics supported by the R Foundation for Statistical Computing. The `R` language is widely used among statisticians and data miners for developing statistical software and data analysis. In this summer we aimed to implement `R-bindings` for mlpack, as with `Python`, `Julia`, and `Go` bindings for mlpack, adding a `R` interface would further enhance the library.
 
 ## R-Binding Generator
-For the past 3 months, I have been implementing `R` binding generator. Like discussed in my weekly progress post, the generator produces three files for every binding:
+For the past 3 months, I have been implementing `R` binding generator. The generator produces two files for every binding:
 
 A `.R` file: This file is the R interface for `R` users. It uses `Rcpp` in order to sharing data and communicate with C++. When generated, the `.R` file is build in the `mlpack/binding/R/mlpack/src` directory.
 A `.cpp` file: This file is used as a `C++` interface. This file includes the function which can be called by `R`.
 Additionally, a method specific library is created the `method_main.cpp` in order for R to call the `mlpack_main()` function.
-
 
 ## Pull Request
 [R-bindings](https://github.com/mlpack/mlpack/pull/2556)
@@ -94,6 +93,12 @@ From mlpack's build system you can use:
 ```sh
 make install
 ```
+or, Like discussed earlier after building R bindings for mlpack, you can run them using (from the build directory):
+```sh
+cd src/mlpack/bindings/R/mlpack/
+R CMD INSTALL
+```
+
 ### TESTING THE BINDINGS
 Finally, to test the binding, `testthat` is used. Simply use:
 
@@ -113,6 +118,9 @@ ctest -R r_binding_test --verbose
 [Fix pointer error in Go-bindings ](https://github.com/mlpack/mlpack/pull/2483)
 
 [:rocket: Add Go bindings for some missed models.](https://github.com/mlpack/mlpack/pull/2460)
+
+## Blog
+You can follow my weekly progress on my medium blogs. [Medium Articles by yashwantsingh.sngh](https://medium.com/@yashwantsingh.sngh)
 
 ## Acknowledgements
 I have no words to describe how grateful I am to my mentors -  [Dirk Eddelbuettel](https://github.com/eddelbuettel), [James Balamuta](https://github.com/coatless) and [Ryan Curtin](https://github.com/rcurtin) - for all their support and for being extremely responsive and helpful with every one of my problems. Without their vote of confidence, this project would've been a lot harder and a lot less fun to do.
