@@ -123,7 +123,7 @@ ctest -R r_binding_test --verbose
 [:rocket: Add Go bindings for some missed models.](https://github.com/mlpack/mlpack/pull/2460)
 
 <p align="left">
-  <img width="485" height="274" src="https://github.com/Yashwants19/GSoC-2020-Work-Report/blob/master/src/mlpack-commits.png">
+  <img width="350" height="250" src="https://github.com/Yashwants19/GSoC-2020-Work-Report/blob/master/src/mlpack-commits.png">
 </p>
 
 ## Blog
