@@ -107,7 +107,9 @@ Finally, to test the binding, `testthat` is used. Simply use:
 ctest -R r_binding_test --verbose
 ```
 
-## Other Pull Request during GSoC
+## Other Pull Request and Commits during GSoC
+[Commits](https://github.com/mlpack/mlpack/commits?author=Yashwants19)
+
 [Force CMake to show error when it didn't find python/modules.](https://github.com/mlpack/mlpack/pull/2568)
 
 [(GSoC Week 11 -12) Refactor ProgramInfo() to separate out all the different information.](https://github.com/mlpack/mlpack/pull/2558)
